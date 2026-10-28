@@ -1,6 +1,5 @@
 name: Bootstrap GitHub Pages
-# One-time setup: creates the Pages site (deploy from main, root folder) and sets the custom domain.
-# Safe to delete once the site is live.
+# One-time check of the Pages configuration. Safe to delete once the site is live.
 on:
   push:
     branches: [main]
@@ -9,22 +8,17 @@ on:
 
 permissions:
   contents: read
-  pages: write
+  pages: read
 
 jobs:
-  bootstrap:
+  verify:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
-      - name: Create the Pages site (branch main, path /)
+      - name: Report Pages configuration
         run: |
-          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages" \
-            -f build_type=legacy -f 'source[branch]=main' -f 'source[path]=/' \
-            || echo "Pages site already exists; continuing"
-      - name: Set custom domain automaata.ai
-        run: |
-          gh api -X PUT "repos/${GITHUB_REPOSITORY}/pages" -f cname=automaata.ai
-      - name: Report Pages status
-        run: |
-          gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '{status, cname, html_url, https_enforced, protected_domain_state, source}'
+          json=$(gh api "repos/${GITHUB_REPOSITORY}/pages")
+          echo "::notice title=Pages config::$(echo "$json" | jq -c '{status, cname, html_url, https_enforced, protected_domain_state, build_type, source}')"
+          build=$(gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" 2>/dev/null || echo '{}')
+          echo "::notice title=Latest build::$(echo "$build" | jq -c '{status, error: .error.message, created_at, updated_at}')"
