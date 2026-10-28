@@ -8,7 +8,7 @@ on:
 
 permissions:
   contents: read
-  pages: read
+  pages: write
 
 jobs:
   verify:
@@ -18,7 +18,9 @@ jobs:
     steps:
       - name: Report Pages configuration
         run: |
-          json=$(gh api "repos/${GITHUB_REPOSITORY}/pages")
-          echo "::notice title=Pages config::$(echo "$json" | jq -c '{status, cname, html_url, https_enforced, protected_domain_state, build_type, source}')"
-          build=$(gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" 2>/dev/null || echo '{}')
-          echo "::notice title=Latest build::$(echo "$build" | jq -c '{status, error: .error.message, created_at, updated_at}')"
+          out=$(gh api "repos/${GITHUB_REPOSITORY}/pages" 2>&1 || true)
+          echo "::notice title=GET pages::$(echo "$out" | tr -d '\n' | cut -c1-600)"
+          out2=$(gh api -X POST "repos/${GITHUB_REPOSITORY}/pages" -f build_type=legacy -f 'source[branch]=main' -f 'source[path]=/' 2>&1 || true)
+          echo "::notice title=POST pages::$(echo "$out2" | tr -d '\n' | cut -c1-600)"
+          out3=$(gh api "repos/${GITHUB_REPOSITORY}/pages" 2>&1 || true)
+          echo "::notice title=GET pages after::$(echo "$out3" | tr -d '\n' | cut -c1-600)"
