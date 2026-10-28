@@ -1,0 +1,30 @@
+name: Bootstrap GitHub Pages
+# One-time setup: creates the Pages site (deploy from main, root folder) and sets the custom domain.
+# Safe to delete once the site is live.
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/bootstrap-pages.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Create the Pages site (branch main, path /)
+        run: |
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages" \
+            -f build_type=legacy -f 'source[branch]=main' -f 'source[path]=/' \
+            || echo "Pages site already exists; continuing"
+      - name: Set custom domain automaata.ai
+        run: |
+          gh api -X PUT "repos/${GITHUB_REPOSITORY}/pages" -f cname=automaata.ai
+      - name: Report Pages status
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '{status, cname, html_url, https_enforced, protected_domain_state, source}'
