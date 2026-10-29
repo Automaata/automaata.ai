@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checkpoint verification: NFC, QR or GPS? · Automaata</title>
+<meta name="description" content="Where each checkpoint method is reliable, where it fails, and how to mix all three on one tour so a patrol record holds up with a client or in a dispute.">
+<link rel="canonical" href="https://automaata.ai/resources/checkpoint-verification-nfc-qr-gps/">
+<meta name="author" content="Automaata">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121C29" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Automaata">
+<meta property="og:title" content="Checkpoint verification: NFC, QR or GPS? · Automaata">
+<meta property="og:description" content="Where each checkpoint method is reliable, where it fails, and how to mix all three on one tour so a patrol record holds up with a client or in a dispute.">
+<meta property="og:url" content="https://automaata.ai/resources/checkpoint-verification-nfc-qr-gps/">
+<meta property="og:image" content="https://automaata.ai/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Automaata — automaata.ai">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Checkpoint verification: NFC, QR or GPS? · Automaata">
+<meta name="twitter:description" content="Where each checkpoint method is reliable, where it fails, and how to mix all three on one tour so a patrol record holds up with a client or in a dispute.">
+<meta name="twitter:image" content="https://automaata.ai/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../assets/site.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Automaata",
+  "url": "https://automaata.ai/",
+  "logo": "https://automaata.ai/apple-touch-icon.png",
+  "email": "hello@automaata.ai",
+  "foundingDate": "2026",
+  "founder": { "@type": "Person", "name": "Dellon Sharma" },
+  "description": "AI-first security workforce management software for contract guard companies and in-house corporate security teams.",
+  "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA", "addressCountry": "US" }
+}
+</script>
+<meta property="article:published_time" content="2026-10-29">
+</head>
+<body data-base="../../">
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="announce"><div class="wrap"><span class="tag">New</span><span>Jessica, Automaata's AI assistant, is live on every page, 24/7.</span><a href="#" data-jessica>Say hello →</a></div></div>
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="../../index.html" aria-label="Automaata home"><svg class="mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="18" cy="10" r="3.2" fill="#F2A900"/><path d="M8 20l5-10 2.6 5.2" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>automaata<small>.ai</small></a>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
+    <ul class="navlinks" id="navlinks">
+      <li><button type="button" aria-expanded="false" aria-controls="mega-platform">Platform</button>
+        <div class="mega" id="mega-platform"><div class="wrap">
+          <div>
+            <div class="aud" role="tablist"><button type="button" role="tab" aria-selected="true" data-pane="firms">Security &amp; guarding providers</button><button type="button" role="tab" aria-selected="false" data-pane="inhouse">In-house security teams</button></div>
+            <div class="mpane" data-pane="firms"><div class="cols">
+              <div><h4>Field operations</h4><a href="../../platform/#tours">Checkpoint tours</a><a href="../../platform/#incidents">Incident reporting</a><a href="../../platform/#dar">Daily activity reports</a><a href="../../platform/#postorders">Post orders</a><a href="../../platform/#dispatch">Live map &amp; dispatch</a><a href="../../platform/#lone">Lone worker safety</a><a href="../../platform/#app">Officer App</a></div>
+              <div><h4>Run the business</h4><a href="../../platform/#scheduling">Scheduling</a><a href="../../platform/#time">Time &amp; attendance</a><a href="../../platform/#credentials">Credentials &amp; training</a><a href="../../platform/#billing">Billing &amp; contracts</a><a href="../../platform/#reconciliation">Reconciliation</a><a href="../../platform/#portal">Client portal</a><a href="../../platform/#console">Ops Console</a></div>
+              <div><h4>Data and AI</h4><a href="../../platform/#levels">Automation levels</a><a href="../../platform/#jessica">Jessica, AI assistant</a><a href="../../platform/#api">API &amp; integrations</a><a href="../../company/#trust">Trust &amp; security</a></div>
+            </div></div>
+            <div class="mpane" data-pane="inhouse" hidden><div class="cols">
+              <div><h4>Protect</h4><a href="../../solutions/#inhouse">Multi-site operations</a><a href="../../platform/#incidents">One incident taxonomy</a><a href="../../platform/#dispatch">Dispatch &amp; SOC view</a><a href="../../platform/#lone">Lone worker safety</a></div>
+              <div><h4>Oversee</h4><a href="../../solutions/#inhouse">Contractor oversight</a><a href="../../platform/#portal">Vendor reporting into your portal</a><a href="../../platform/#credentials">Compliance records</a><a href="../../platform/#reconciliation">Invoice verification</a></div>
+              <div><h4>Own the data</h4><a href="../../platform/#api">API &amp; exports</a><a href="../../platform/#levels">Automation levels</a><a href="../../company/#trust">Trust &amp; security</a></div>
+            </div></div>
+          </div>
+          <div class="side">
+            <a class="feat" href="../../resources/automated-scheduling-and-california-admt-rules/"><span class="eyebrow">Featured guide</span><b>Automated scheduling and California's ADMT rules</b><span>Notice, review and records when software proposes who works.</span></a>
+            <div class="badges"><span>Offline-first</span><span>AI text labeled</span><span>No training on client data</span><span>SOC 2 roadmap</span></div>
+            <a class="btn btn-primary btn-sm" href="../../pricing/#request">Get a demo</a>
+          </div>
+        </div></div>
+      </li>
+      <li><button type="button" aria-expanded="false" aria-controls="mega-solutions">Solutions</button>
+        <div class="mega" id="mega-solutions"><div class="wrap">
+          <div class="cols">
+            <div><h4>By business need</h4><a href="../../solutions/#operations">Streamline operations</a><a href="../../solutions/#safety">Safety &amp; incident response</a><a href="../../solutions/#margin">Protect margin &amp; billing</a><a href="../../solutions/#payroll">Automate payroll &amp; workforce</a><a href="../../solutions/#compliance">Stay compliant</a><a href="../../solutions/#roi">Prove ROI &amp; visibility</a></div>
+            <div><h4>By organization type</h4><a href="../../solutions/#firms">Security firms</a><a href="../../solutions/#inhouse">In-house security teams</a></div>
+            <div><h4>By industry</h4><a href="../../solutions/#industries">Event &amp; venue security</a><a href="../../solutions/#industries">Corporate campuses</a><a href="../../solutions/#industries">Hospitality</a><a href="../../solutions/#industries">Residential communities</a><a href="../../solutions/#industries">Logistics &amp; industrial</a><a href="../../solutions/#industries">Healthcare</a></div>
+          </div>
+          <div class="side">
+            <a class="feat" href="../../resources/duty-free-rest-breaks-in-california/"><span class="eyebrow">Featured guide</span><b>Duty-free rest breaks in California</b><span>What Augustus v. ABM requires of a guard schedule.</span></a>
+            <a class="btn btn-primary btn-sm" href="../../pricing/#request">Get a demo</a>
+          </div>
+        </div></div>
+      </li>
+      <li><button type="button" aria-expanded="false" aria-controls="mega-support">Support</button>
+        <div class="mega" id="mega-support"><div class="wrap">
+          <div class="cols two">
+            <div><h4>Get help</h4><a href="../../support/">Support overview</a><a href="#" data-jessica>Jessica, AI assistant<small>Available 24/7</small></a><a href="../../support/#email">Email a specialist</a><a href="../../support/#faq">Knowledge base</a></div>
+            <div><h4>Learn</h4><a href="../../support/#academy">Automaata Academy</a><a href="../../support/#status">System status</a><a href="../../resources/">Guides &amp; articles</a></div>
+          </div>
+          <div class="side">
+            <a class="feat" href="#" data-jessica><span class="eyebrow">24/7</span><b>Ask Jessica anything about Automaata</b><span>Instant answers, with an in-browser AI model you can switch on.</span></a>
+            <a class="btn btn-primary btn-sm" href="../../support/#email">Contact support</a>
+          </div>
+        </div></div>
+      </li>
+      <li><button type="button" aria-expanded="false" aria-controls="mega-resources">Resources</button>
+        <div class="mega" id="mega-resources"><div class="wrap">
+          <div class="cols two">
+            <div><h4>Library</h4><a href="../../resources/">All resources</a><a href="../../resources/#guides">Guides</a><a href="../../resources/#blog">Blog articles</a><a href="../../resources/#updates">Product updates</a></div>
+            <div><h4>More</h4><a href="../../resources/#cases">Case studies</a><a href="../../support/#academy">Automaata Academy</a></div>
+          </div>
+          <div class="side">
+            <a class="feat" href="../../resources/checkpoint-verification-nfc-qr-gps/"><span class="eyebrow">Featured guide</span><b>Checkpoint verification: NFC, QR or GPS?</b><span>Where each method is reliable and how to mix them on one tour.</span></a>
+            <a class="btn btn-primary btn-sm" href="../../pricing/#request">Get a demo</a>
+          </div>
+        </div></div>
+      </li>
+      <li><button type="button" aria-expanded="false" aria-controls="mega-company">Company</button>
+        <div class="mega" id="mega-company"><div class="wrap">
+          <div>
+            <p style="font-family:var(--display);font-weight:700;font-size:18px;margin-bottom:14px">Built in San Francisco for the people who protect people.</p>
+            <div class="badges" style="margin-bottom:18px"><span>Founded 2026</span><span>San Francisco</span><span>4 automation levels</span><span>AI, disclosed</span></div>
+            <div class="cols">
+              <div><h4>Company</h4><a href="../../company/">About Automaata</a><a href="../../company/#values">What we believe</a><a href="../../company/#leadership">Leadership</a></div>
+              <div><h4>Work with us</h4><a href="../../company/#careers">Careers</a><a href="../../support/#email">Contact</a></div>
+              <div><h4>Trust</h4><a href="../../company/#trust">Trust &amp; security</a><a href="../../legal/#ai">AI use disclosure</a></div>
+            </div>
+          </div>
+          <div class="side">
+            <a class="feat" href="../../resources/the-four-automation-levels-explained/"><span class="eyebrow">Featured article</span><b>The four automation levels, explained</b><span>How Automaata decides what to do on its own.</span></a>
+            <a class="btn btn-primary btn-sm" href="../../pricing/#request">Get a demo</a>
+          </div>
+        </div></div>
+      </li>
+      <li><a href="../../pricing/">Pricing</a></li>
+      <li class="tt"><button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" title="Dark mode"><span class="sr">Dark mode</span></button></li>
+      <li class="cta"><a class="btn btn-primary btn-sm" href="../../pricing/#request">Get a demo</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+
+<article class="article wrap">
+  <p class="eyebrow"><span><a href="../" style="text-decoration:none">Resources</a></span><span>Guide</span><span>Oct 29, 2026</span><span>6 min read</span></p>
+  <h1>Checkpoint verification: NFC, QR or GPS?</h1>
+  <p class="lede">Where each checkpoint method is reliable, where it fails, and how to mix all three on one tour so a patrol record holds up with a client or in a dispute.</p>
+  <div class="body">
+<p>A guard tour is only as good as the proof that the officer was at each point. Modern tour systems log that proof with one of three technologies: an NFC tag the phone taps, a QR code the camera reads, or a GPS position the phone reports. Each one answers the same question, "was someone here at this time?", with a different kind of evidence, and each fails in a different place.</p>
+
+<h2>NFC tags</h2>
+<p>An NFC checkpoint is a small passive tag fixed to the wall, door frame or post. The officer holds the back of the phone against it and the app records the tag's unique serial number with a timestamp. Because the serial is read from the chip, a scan cannot be faked from a photograph, and the tag works in the dark, in rain and with gloves on.</p>
+<p>The practical standard is the NTAG213 chip (13.56 MHz, ISO 14443), which reads reliably on both Android and iPhone and costs cents per tag in bulk. For indoor routes use on-metal PVC stickers of about 30 mm; for outdoor or exposed points use IP68 anti-metal discs of about 22 mm screwed to the surface. Mount tags around 160 cm from the floor so they are a natural tap height, and never directly on bare steel without an anti-metal tag, because the metal detunes the antenna.</p>
+<p><b>Where it fails:</b> a tag that has been pried off or painted over, a phone with NFC switched off, and the one guard on the roster whose phone has no NFC radio.</p>
+
+<h2>QR and barcode labels</h2>
+<p>A QR checkpoint is a printed label the officer scans with the camera. It needs no special hardware, can be reprinted in minutes, and is the fastest way to cover an interior route. The trade-off is that a label can be photographed and scanned from the photo later, so QR proves the code was scanned, not that the person was standing at it. QR also fades and tears, and a dirty camera lens in a dark stairwell adds seconds to every scan.</p>
+<p><b>Where it fails:</b> low light, weather, vandalism, and any site where a client is likely to ask "how do you know they were really there?"</p>
+
+<h2>GPS checkpoints</h2>
+<p>A GPS checkpoint is a map position with a radius. When the phone reports a location inside the radius, the app records the visit. It needs nothing installed on the site, which makes it the right choice for perimeters, parking lots and open yards. Set the required accuracy to 15 to 20 metres; tighter radii generate false misses because consumer GPS rarely does better than that.</p>
+<p><b>Where it fails:</b> indoors. Inside a building, in a garage or under a steel roof, GPS drifts by tens of metres or drops out entirely, so GPS points inside a structure produce missed-checkpoint alerts that are not real.</p>
+
+<h2>Comparison</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Factor</th><th>NFC</th><th>QR / barcode</th><th>GPS</th></tr></thead>
+<tbody>
+<tr><td>Proof of presence</td><td>Strong (chip serial)</td><td>Weak (code can be copied)</td><td>Moderate (position, not point)</td></tr>
+<tr><td>Hardware on site</td><td>Tag</td><td>Printed label</td><td>None</td></tr>
+<tr><td>Works in dark / rain</td><td>Yes</td><td>Poorly</td><td>Yes</td></tr>
+<tr><td>Indoors</td><td>Yes</td><td>Yes</td><td>Unreliable</td></tr>
+<tr><td>Cost per point</td><td>Cents to a few dollars</td><td>Near zero</td><td>Zero</td></tr>
+<tr><td>Best for</td><td>Doors, mechanical rooms, secured access points</td><td>Interior routes, temporary layouts</td><td>Perimeters, lots, open yards</td></tr>
+</tbody></table></div>
+
+<h2>Mixing methods on one tour</h2>
+<p>Most sites use all three. A typical night tour of a mixed-use building might run: NFC at the loading dock door and the roof access, QR along the corridor route, GPS at the two far corners of the parking lot. The tour is still one tour with one start, one end and one elapsed time; the checkpoint type is a property of each point.</p>
+<p>Whatever the method, keep a manual check-in with a required reason code as the fallback. A tag that has been vandalised should produce a record that says "checkpoint 7 could not be scanned: tag missing" rather than a silent gap, because the gap is what a client sees.</p>
+
+<div class="callout"><b>How Automaata does it.</b> Checkpoints are typed per point (NFC, QR, GPS or manual) within a single tour. Scans are stored on the phone with a timestamp and a sequence number and sync when a signal returns, so a garage never loses a record. Late tours and missed points raise an exception automatically (Level 1), and exception questions can require a photo. The Officer App binds a blank NTAG213 to a checkpoint with one tap.</div>
+
+<h2>Naming and layout</h2>
+<ul>
+<li>Name points Building/Floor/Point (for example, "North/B2/Fire pump room") so reports read without a map.</li>
+<li>Put the first and last checkpoint near the post so the elapsed time measures the route, not the walk to it.</li>
+<li>Photograph each tag's location when you install it; it is the fastest way to find a tag a contractor has painted over.</li>
+<li>Review missed-checkpoint exceptions weekly by type. A point that is missed every night is usually a layout problem, not an officer problem.</li>
+</ul>
+<p class="src">Sources: Trackforce support, "Selecting NFC tags"; Trackforce, "What Is Checkpoint Verification? NFC vs. QR vs. GPS Compared"; TrackTik support, "Best Practices for Creating Checkpoints and Tours"; TimeTec NFC tag installation guide.</p>
+  </div>
+  <p class="src" style="border:0;padding-top:28px"><a class="btn btn-primary" href="../../pricing/#request">Get a demo</a> &nbsp; <a class="arrow" href="../">All resources →</a></p>
+</article>
+
+</main>
+<footer>
+  <div class="wrap top">
+    <div class="about">
+      <a class="brand" href="../../index.html"><svg class="mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="18" cy="10" r="3.2" fill="#F2A900"/><path d="M8 20l5-10 2.6 5.2" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>automaata<small>.ai</small></a>
+      <p>AI-first security workforce management for contract guard companies and in-house security teams. Field operations, back office and client reporting on one record.</p>
+      <div class="mini"><span>Founded 2026 · San Francisco</span><span>AI text labeled</span><span>No training on client data</span></div>
+    </div>
+    <div><h4>Platform</h4><ul><li><a href="../../platform/">Platform overview</a></li><li><a href="../../platform/#app">Officer App</a></li><li><a href="../../platform/#console">Ops Console</a></li><li><a href="../../platform/#portal">Client Portal</a></li><li><a href="../../platform/#tours">Checkpoint tours</a></li><li><a href="../../platform/#incidents">Incident reporting</a></li><li><a href="../../platform/#scheduling">Scheduling</a></li><li><a href="../../platform/#time">Time &amp; attendance</a></li><li><a href="../../platform/#billing">Billing</a></li><li><a href="../../platform/#levels">Automation levels</a></li><li><a href="../../platform/#jessica">Jessica AI</a></li><li><a href="../../platform/#api">API &amp; integrations</a></li></ul></div>
+    <div><h4>Solutions</h4><ul><li><a href="../../solutions/#operations">Streamline operations</a></li><li><a href="../../solutions/#safety">Safety &amp; incidents</a></li><li><a href="../../solutions/#margin">Margin &amp; billing</a></li><li><a href="../../solutions/#payroll">Payroll &amp; workforce</a></li><li><a href="../../solutions/#compliance">Compliance</a></li><li><a href="../../solutions/#roi">ROI &amp; visibility</a></li><li><a href="../../solutions/#firms">Security firms</a></li><li><a href="../../solutions/#inhouse">In-house teams</a></li><li><a href="../../solutions/#industries">Industries</a></li></ul></div>
+    <div><h4>Resources</h4><ul><li><a href="../../resources/">All resources</a></li><li><a href="../../resources/#guides">Guides</a></li><li><a href="../../resources/#blog">Blog</a></li><li><a href="../../resources/#updates">Product updates</a></li><li><a href="../../resources/#cases">Case studies</a></li><li><a href="../../support/#academy">Academy</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="../../company/">About</a></li><li><a href="../../company/#values">Values</a></li><li><a href="../../company/#leadership">Leadership</a></li><li><a href="../../company/#careers">Careers</a></li><li><a href="../../company/#trust">Trust &amp; security</a></li><li><a href="../../support/#email">Contact</a></li></ul></div>
+    <div><h4>Support</h4><ul><li><a href="../../support/">Support overview</a></li><li><a href="#" data-jessica>Ask Jessica (24/7)</a></li><li><a href="../../support/#email">Email support</a></li><li><a href="../../support/#faq">Knowledge base</a></li><li><a href="../../support/#status">System status</a></li><li><a href="../../pricing/">Pricing</a></li></ul></div>
+  </div>
+  <div class="legal"><div class="wrap">
+    <span>© <span data-year>2026</span> Automaata · automaata.ai · San Francisco, California · Independent, not affiliated with any other security software provider.</span>
+    <span class="links"><a href="../../legal/#privacy">Privacy</a><a href="../../legal/#terms">Terms</a><a href="../../legal/#ai">AI use</a><a href="../../legal/#accessibility">Accessibility</a><a href="../../sitemap.xml">Sitemap</a></span>
+  </div></div>
+</footer>
+<script src="../../assets/site.js"></script>
+<script src="../../assets/jessica.js"></script>
+</body>
+</html>

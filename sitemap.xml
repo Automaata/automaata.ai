@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://automaata.ai/</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
+  <url><loc>https://automaata.ai/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/platform/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/solutions/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/support/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/resources/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/company/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/pricing/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/legal/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/resources/checkpoint-verification-nfc-qr-gps/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/resources/introducing-jessica/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/resources/the-four-automation-levels-explained/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/resources/duty-free-rest-breaks-in-california/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/resources/automated-scheduling-and-california-admt-rules/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/resources/california-guard-card-training-clock/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://automaata.ai/resources/why-guard-tour-apps-fail-offline/</loc><lastmod>2026-10-29</lastmod></url>
 </urlset>

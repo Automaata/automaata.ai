@@ -1,0 +1,26 @@
+<!-- title: Automated scheduling and California's ADMT rules: a plain-language brief | type: Guide | date: 2026-10-27 | read: 8 | topics: scheduling compliance ai | aud: firms inhouse | summary: When software proposes who works, California's rules on automated decision-making technology require notice, a human review path and records, with employer compliance from January 1, 2027. What that means for a guard operation. -->
+<p>Software that builds a roster is making a decision about work. In California that now has a legal name, automated decision-making technology (ADMT), and a set of obligations attached to it. This brief explains what the rules say, which parts touch a security operation, and how a platform can be designed so compliance is a by-product of using it.</p>
+
+<h2>What the rules are</h2>
+<p>On July 24, 2025 the California Privacy Protection Agency adopted regulations under the California Consumer Privacy Act covering ADMT, risk assessments and cybersecurity audits. ADMT is defined as any technology that processes personal information and uses computation to replace, or substantially replace, human decision-making. The regulations apply when ADMT is used to make a "significant decision" about a person, and the list of significant decisions expressly includes employment decisions: hiring, work assignments, compensation, promotion and termination.</p>
+<p>For covered employers, the obligations are a pre-use notice to the people affected, a right to opt out of the automated decision (or an equivalent human-review path), a right to access information about how the decision was made, and a risk assessment that must be completed within 24 months of the regulations' effective date and updated at least every three years. Employer compliance for covered ADMT in employment is required from January 1, 2027.</p>
+
+<h2>Does a scheduler count?</h2>
+<p>Read literally, software that assigns shifts without a person reviewing them is making a work-assignment decision by computation. Whether a given tool "substantially replaces" human judgment depends on how it is used: a solver whose output is always reviewed and can be changed by a scheduler before it posts is in a different position from one that publishes assignments automatically. The regulations also exempt some uses, and whether a particular guard company is a covered business depends on the CCPA's thresholds. None of that is settled enough to rely on without counsel, so the safer design is to assume the scheduler is in scope.</p>
+
+<h2>The same direction elsewhere</h2>
+<p>Colorado's AI Act, which also treats employment decisions as consequential, was delayed to June 30, 2026, then stayed by a federal court in April 2026; a replacement bill introduced in May 2026 would impose notice, disclosure, record-keeping and review obligations on employers using ADMT in employment from January 1, 2027. In the European Union, the Digital Omnibus on AI moved the AI Act's high-risk obligations for employment and worker-management systems to December 2, 2027, while the transparency duty to disclose AI interactions applies from August 2026. The specifics differ, but every regime is converging on the same three things: tell people, let a person review, keep records.</p>
+
+<h2>What a guard operation should do</h2>
+<ol>
+<li><b>Give notice.</b> Tell officers, before the first automated roster, that scheduling software proposes assignments, what it considers (credentials, hours caps, breaks, site rules, stated preferences) and how to ask for a human review.</li>
+<li><b>Keep a person in the loop.</b> A scheduler reviews and can change every proposed roster before it posts. That is the human review path, and it is also good operations.</li>
+<li><b>Record the decision.</b> For each assignment, keep what the software proposed, what the person approved, and when. For each opt-out or appeal, keep the request and the outcome.</li>
+<li><b>Do the risk assessment.</b> Document what the tool does, what data it uses, the risks of error or bias, and the safeguards. The platform vendor should supply most of this.</li>
+<li><b>Ask the vendor the hard questions.</b> Can the tool show, for any assignment, why it was proposed? Can it export the decision records? Does it ever publish an assignment without approval?</li>
+</ol>
+
+<div class="callout"><b>How Automaata does it.</b> Shift assignments, overtime, pay runs and invoice release are Level 2 actions: the platform proposes, a person approves, and both are recorded with the solver's explanation. Pre-use notices and opt-out or appeal requests are records in the data model, not emails to search for later. Discipline, termination and licensing decisions are Level 3 and are never automated.</div>
+
+<p>This brief is general information, not legal advice. The regulations are new, guidance is still arriving, and the thresholds and exemptions depend on facts about your business. Confirm your position with privacy and employment counsel before January 2027.</p>
+<p class="src">Sources: California Privacy Protection Agency, CCPA Updates, Cyber, Risk, ADMT and Insurance Regulations (adopted July 24, 2025); analyses by Willkie Farr &amp; Gallagher, Littler and Proskauer; Proskauer, "Major Developments Put Colorado's AI Law on Ice" (May 2026); Regulation (EU) 2026/1744 (Digital Omnibus on AI).</p>

@@ -1,0 +1,28 @@
+<!-- title: Why guard tour apps fail offline, and how Automaata handles it | type: Blog article | date: 2026-10-22 | read: 6 | topics: mobile tours | aud: firms inhouse | summary: Basements, parking garages and piers have no signal. The sync design that keeps every scan, in order, without double-counting, and why most field apps get it wrong. -->
+<p>Security work happens in the places phones hate: sub-basements, concrete garages, mechanical rooms, loading docks under steel decks, and piers where the only signal is the one bouncing off the water. An officer app that needs a connection to record a scan does not record the scan. The gap shows up the next morning as a missed checkpoint on the client's report, and the officer is blamed for the building's construction.</p>
+
+<h2>Three ways field apps fail</h2>
+<p><b>They queue, but do not store.</b> Many apps hold unsent scans in memory and send them when the signal returns. If the app is killed by the operating system to save battery, which happens routinely on a cheap Android phone after a few hours, the queue dies with it.</p>
+<p><b>They trust the phone's clock.</b> When scans arrive late, the server needs to know when each one really happened. If the app relies on the device time and that time is wrong (a manual setting, a time zone, a phone that has been off), scans land out of order or in the wrong shift. Vendors' own support pages tell customers to set device time to automatic for exactly this reason.</p>
+<p><b>They double-count on retry.</b> The app sends a batch, the connection drops before the acknowledgement arrives, the app sends again. Without a stable identity for each scan, the server now has two of them, and the tour report shows a checkpoint visited twice in one minute.</p>
+
+<h2>What the design has to be</h2>
+<ol>
+<li><b>Write to disk first.</b> Every scan, clock punch, report and photo is written to a local database on the phone before anything else happens. The app can be killed; the record survives.</li>
+<li><b>Give every event an identity.</b> Each record carries a unique ID generated on the phone, the device timestamp, and a sequence number that only goes up. Replaying a batch is harmless, because the server already knows those IDs.</li>
+<li><b>Let the server decide the time of record.</b> The device timestamp is kept as evidence, but the server also records when it received the event and flags any event whose device clock drifts beyond a threshold. Order is reconstructed from the sequence number, not the clock.</li>
+<li><b>Keep mutable things server-side.</b> Schedules, post orders and rates are read-only on the device. Only append-only field events are created offline, so there is nothing to merge and no conflict to resolve.</li>
+<li><b>Sync in the background, visibly.</b> The officer sees a count of unsynced records and a timestamp of the last successful sync. A supervisor sees the same per device in the console, so a phone that has not synced in six hours is a thing someone notices before the report goes out.</li>
+</ol>
+
+<div class="callout"><b>How Automaata does it.</b> The Officer App is built on a local database with a sync engine that replicates to the platform's Postgres backend. Field events are append-only inserts with a client-generated ID and sequence number, which is why offline replay never conflicts. Server-received time is the time of record; device-clock drift is flagged. Tours can be started, scanned and completed with no signal at all, and the console shows the last sync time for every device on shift.</div>
+
+<h2>What to ask a vendor</h2>
+<ul>
+<li>Can an officer start, scan and finish a tour with the phone in airplane mode, then sync it an hour later with every timestamp intact?</li>
+<li>What happens if the operating system kills the app mid-shift?</li>
+<li>If the same batch is sent twice, what does the report show?</li>
+<li>Can a supervisor see which devices have not synced, and since when?</li>
+</ul>
+<p>A vendor who can answer all four without hedging has built the app for the places your officers actually work.</p>
+<p class="src">Sources: TrackTik support, "Mobile App issues with GPS and Checkpoints"; Connecteam's TrackTik review (offline behaviour and app-store ratings); PowerSync and ElectricSQL documentation on offline-first sync.</p>

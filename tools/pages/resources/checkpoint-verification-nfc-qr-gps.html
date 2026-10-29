@@ -1,0 +1,42 @@
+<!-- title: Checkpoint verification: NFC, QR or GPS? | type: Guide | date: 2026-10-29 | read: 6 | topics: tours mobile | aud: firms inhouse | summary: Where each checkpoint method is reliable, where it fails, and how to mix all three on one tour so a patrol record holds up with a client or in a dispute. -->
+<p>A guard tour is only as good as the proof that the officer was at each point. Modern tour systems log that proof with one of three technologies: an NFC tag the phone taps, a QR code the camera reads, or a GPS position the phone reports. Each one answers the same question, "was someone here at this time?", with a different kind of evidence, and each fails in a different place.</p>
+
+<h2>NFC tags</h2>
+<p>An NFC checkpoint is a small passive tag fixed to the wall, door frame or post. The officer holds the back of the phone against it and the app records the tag's unique serial number with a timestamp. Because the serial is read from the chip, a scan cannot be faked from a photograph, and the tag works in the dark, in rain and with gloves on.</p>
+<p>The practical standard is the NTAG213 chip (13.56 MHz, ISO 14443), which reads reliably on both Android and iPhone and costs cents per tag in bulk. For indoor routes use on-metal PVC stickers of about 30 mm; for outdoor or exposed points use IP68 anti-metal discs of about 22 mm screwed to the surface. Mount tags around 160 cm from the floor so they are a natural tap height, and never directly on bare steel without an anti-metal tag, because the metal detunes the antenna.</p>
+<p><b>Where it fails:</b> a tag that has been pried off or painted over, a phone with NFC switched off, and the one guard on the roster whose phone has no NFC radio.</p>
+
+<h2>QR and barcode labels</h2>
+<p>A QR checkpoint is a printed label the officer scans with the camera. It needs no special hardware, can be reprinted in minutes, and is the fastest way to cover an interior route. The trade-off is that a label can be photographed and scanned from the photo later, so QR proves the code was scanned, not that the person was standing at it. QR also fades and tears, and a dirty camera lens in a dark stairwell adds seconds to every scan.</p>
+<p><b>Where it fails:</b> low light, weather, vandalism, and any site where a client is likely to ask "how do you know they were really there?"</p>
+
+<h2>GPS checkpoints</h2>
+<p>A GPS checkpoint is a map position with a radius. When the phone reports a location inside the radius, the app records the visit. It needs nothing installed on the site, which makes it the right choice for perimeters, parking lots and open yards. Set the required accuracy to 15 to 20 metres; tighter radii generate false misses because consumer GPS rarely does better than that.</p>
+<p><b>Where it fails:</b> indoors. Inside a building, in a garage or under a steel roof, GPS drifts by tens of metres or drops out entirely, so GPS points inside a structure produce missed-checkpoint alerts that are not real.</p>
+
+<h2>Comparison</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Factor</th><th>NFC</th><th>QR / barcode</th><th>GPS</th></tr></thead>
+<tbody>
+<tr><td>Proof of presence</td><td>Strong (chip serial)</td><td>Weak (code can be copied)</td><td>Moderate (position, not point)</td></tr>
+<tr><td>Hardware on site</td><td>Tag</td><td>Printed label</td><td>None</td></tr>
+<tr><td>Works in dark / rain</td><td>Yes</td><td>Poorly</td><td>Yes</td></tr>
+<tr><td>Indoors</td><td>Yes</td><td>Yes</td><td>Unreliable</td></tr>
+<tr><td>Cost per point</td><td>Cents to a few dollars</td><td>Near zero</td><td>Zero</td></tr>
+<tr><td>Best for</td><td>Doors, mechanical rooms, secured access points</td><td>Interior routes, temporary layouts</td><td>Perimeters, lots, open yards</td></tr>
+</tbody></table></div>
+
+<h2>Mixing methods on one tour</h2>
+<p>Most sites use all three. A typical night tour of a mixed-use building might run: NFC at the loading dock door and the roof access, QR along the corridor route, GPS at the two far corners of the parking lot. The tour is still one tour with one start, one end and one elapsed time; the checkpoint type is a property of each point.</p>
+<p>Whatever the method, keep a manual check-in with a required reason code as the fallback. A tag that has been vandalised should produce a record that says "checkpoint 7 could not be scanned: tag missing" rather than a silent gap, because the gap is what a client sees.</p>
+
+<div class="callout"><b>How Automaata does it.</b> Checkpoints are typed per point (NFC, QR, GPS or manual) within a single tour. Scans are stored on the phone with a timestamp and a sequence number and sync when a signal returns, so a garage never loses a record. Late tours and missed points raise an exception automatically (Level 1), and exception questions can require a photo. The Officer App binds a blank NTAG213 to a checkpoint with one tap.</div>
+
+<h2>Naming and layout</h2>
+<ul>
+<li>Name points Building/Floor/Point (for example, "North/B2/Fire pump room") so reports read without a map.</li>
+<li>Put the first and last checkpoint near the post so the elapsed time measures the route, not the walk to it.</li>
+<li>Photograph each tag's location when you install it; it is the fastest way to find a tag a contractor has painted over.</li>
+<li>Review missed-checkpoint exceptions weekly by type. A point that is missed every night is usually a layout problem, not an officer problem.</li>
+</ul>
+<p class="src">Sources: Trackforce support, "Selecting NFC tags"; Trackforce, "What Is Checkpoint Verification? NFC vs. QR vs. GPS Compared"; TrackTik support, "Best Practices for Creating Checkpoints and Tours"; TimeTec NFC tag installation guide.</p>

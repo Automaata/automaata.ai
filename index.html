@@ -10,10 +10,9 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121C29" media="(prefers-color-scheme: dark)">
-
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Automaata">
-<meta property="og:title" content="Automaata — AI-first security workforce management">
+<meta property="og:title" content="Automaata">
 <meta property="og:description" content="Automaata is AI-first security workforce management for contract guard companies and in-house security teams: an officer app that works offline, an operations console that drafts schedules, reports and invoices, and an approval inbox for the decisions that matter.">
 <meta property="og:url" content="https://automaata.ai/">
 <meta property="og:image" content="https://automaata.ai/og.png">
@@ -21,17 +20,15 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Automaata — automaata.ai">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Automaata — AI-first security workforce management">
+<meta name="twitter:title" content="Automaata">
 <meta name="twitter:description" content="Automaata is AI-first security workforce management for contract guard companies and in-house security teams: an officer app that works offline, an operations console that drafts schedules, reports and invoices, and an approval inbox for the decisions that matter.">
 <meta name="twitter:image" content="https://automaata.ai/og.png">
-
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-
+<link rel="stylesheet" href="assets/site.css">
 <script>
   (function () {
     try {
@@ -40,7 +37,6 @@
     } catch (e) {}
   })();
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,731 +45,272 @@
   "url": "https://automaata.ai/",
   "logo": "https://automaata.ai/apple-touch-icon.png",
   "email": "hello@automaata.ai",
+  "foundingDate": "2026",
+  "founder": { "@type": "Person", "name": "Dellon Sharma" },
   "description": "AI-first security workforce management software for contract guard companies and in-house corporate security teams.",
   "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA", "addressCountry": "US" }
 }
 </script>
 
-<style>
-/* Layout: full-bleed bands, each with an inner .wrap that carries the side gutter; hero splits copy | console mock; feature grid 3 → 2 → 1 columns. */
-:root{
-  --bg:#F2F4F7;
-  --surface:#FFFFFF;
-  --surface-2:#E9ECF1;
-  --ink:#0F1B2D;
-  --ink-2:#4B586A;
-  --line:#D4D9E1;
-  --accent:#F2A900;
-  --accent-ink:#1A1300;
-  --accent-soft:#FFF1C9;
-  --good:#1F8A4C;
-  --crit:#C0392B;
-  --console:#0F1B2D;
-  --console-2:#162436;
-  --console-fg:#E6ECF3;
-  --console-muted:#8B99AC;
-  --console-line:#273B55;
-  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
-  --body:'IBM Plex Sans','Segoe UI',Helvetica,Arial,sans-serif;
-  --mono:'IBM Plex Mono',Menlo,Consolas,monospace;
-  --wrap:1180px;
-  --radius:6px;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0B121C; --surface:#121C29; --surface-2:#1A2634; --ink:#E6ECF3; --ink-2:#A3B0C0; --line:#263447;
-    --accent:#FFBF2E; --accent-ink:#1A1300; --accent-soft:#2B220A; --good:#4CC078; --crit:#E8655A;
-    --console:#0A1119; --console-2:#111B28; --console-fg:#E6ECF3; --console-muted:#8B99AC; --console-line:#223247;
-    color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0B121C; --surface:#121C29; --surface-2:#1A2634; --ink:#E6ECF3; --ink-2:#A3B0C0; --line:#263447;
-  --accent:#FFBF2E; --accent-ink:#1A1300; --accent-soft:#2B220A; --good:#4CC078; --crit:#E8655A;
-  --console:#0A1119; --console-2:#111B28; --console-fg:#E6ECF3; --console-muted:#8B99AC; --console-line:#223247;
-  color-scheme:dark;
-}
-
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
-h1,h2,h3,h4{font-family:var(--display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-0.01em}
-p{margin:0}
-a{color:inherit}
-img,svg{max-width:100%}
-.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
-.lede{font-size:18px;color:var(--ink-2);max-width:62ch}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:15px;text-decoration:none;padding:12px 18px;border-radius:var(--radius);border:1px solid transparent;cursor:pointer;line-height:1}
-.btn-primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.btn-primary:hover{filter:brightness(.95)}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn-ghost:hover{background:var(--surface-2)}
-.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-
-/* Header */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--surface);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-0.02em}
-.brand .mark{width:28px;height:28px;flex:none}
-.brand small{font-family:var(--mono);font-weight:400;font-size:11px;color:var(--ink-2);letter-spacing:.08em;margin-left:4px}
-.navlinks{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
-.navlinks a{text-decoration:none;font-weight:500;font-size:15px;color:var(--ink-2)}
-.navlinks a:hover{color:var(--ink)}
-.navlinks .btn{color:var(--accent-ink)}
-.navtoggle{display:none;background:none;border:1px solid var(--line);border-radius:var(--radius);padding:8px 10px;color:var(--ink);font-family:var(--mono);font-size:12px;cursor:pointer}
-@media (max-width:820px){
-  .navtoggle{display:inline-block}
-  .navlinks{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);border-bottom:1px solid var(--line);padding:8px max(16px,env(safe-area-inset-left,0px)) 16px}
-  .nav.open .navlinks{display:flex}
-  .navlinks li{padding:10px 0;border-top:1px solid var(--line)}
-  .navlinks li:first-child{border-top:0}
-}
-
-/* Hero */
-.hero{background:var(--surface);border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center;padding-block:64px 72px}
-.hero h1{font-size:clamp(36px,5vw,58px);font-weight:800;margin-top:14px}
-.hero .lede{margin-top:20px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.hero .rules{margin-top:26px;font-family:var(--mono);font-size:13px;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:8px 18px}
-.hero .rules span::before{content:"";display:inline-block;width:8px;height:8px;background:var(--accent);margin-right:8px;transform:rotate(45deg)}
-@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:36px;padding-block:44px 56px}}
-
-/* Console mock */
-.console{background:var(--console);color:var(--console-fg);border:1px solid var(--console-line);border-radius:10px;overflow:hidden;font-size:14px;min-width:0;box-shadow:0 24px 60px rgba(8,16,30,.25)}
-.console-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--console-line);background:var(--console-2)}
-.console-head strong{font-family:var(--display);font-weight:700;font-size:14px}
-.console-head .live{font-family:var(--mono);font-size:12px;color:var(--console-muted);display:flex;align-items:center;gap:8px}
-.live i{width:8px;height:8px;border-radius:50%;background:var(--good);display:inline-block;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.console-row{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 16px;border-bottom:1px solid var(--console-line)}
-.console-row time{font-family:var(--mono);font-size:12px;color:var(--console-muted);padding-top:2px;font-variant-numeric:tabular-nums}
-.console-row .what{min-width:0}
-.console-row .what b{font-weight:600}
-.console-row .what span{display:block;color:var(--console-muted);font-size:13px;margin-top:2px}
-.chip{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:4px;white-space:nowrap;border:1px solid var(--console-line);color:var(--console-muted)}
-.chip.auto{border-color:transparent;background:rgba(76,192,120,.14);color:#7FD9A1}
-.chip.approve{border-color:transparent;background:rgba(255,191,46,.16);color:#FFD061}
-.console-actions{display:flex;gap:6px;margin-top:8px}
-.console-actions button{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:5px 9px;border-radius:4px;border:1px solid var(--console-line);background:transparent;color:var(--console-fg);cursor:pointer}
-.console-actions button.ok{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.console-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 16px;font-family:var(--mono);font-size:12px;color:var(--console-muted);background:var(--console-2)}
-@media (max-width:520px){.console-row{grid-template-columns:1fr;gap:6px}.console-row .chip{justify-self:start}}
-
-/* Sections */
-.section{padding-block:72px}
-.section-head{max-width:70ch}
-.section-head h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;margin-top:12px}
-.section-head .lede{margin-top:14px}
-.band{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-
-/* Built for strip */
-.builtfor .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;padding-block:22px}
-.builtfor .eyebrow{margin-right:6px}
-.builtfor span{font-family:var(--display);font-weight:700;font-size:15px;color:var(--ink-2)}
-
-/* Feature grid */
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px}
-@media (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:620px){.grid{grid-template-columns:1fr}}
-.feature{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
-.feature .tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
-.feature h3{font-size:19px;font-weight:700}
-.feature p{color:var(--ink-2);font-size:15px}
-.feature .auto{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-family:var(--mono);font-size:12px;color:var(--ink)}
-.feature .auto::before{content:"AUTO ";color:var(--ink-2);letter-spacing:.08em}
-
-/* Tiers */
-.tiers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:40px}
-@media (max-width:980px){.tiers{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.tiers{grid-template-columns:1fr}}
-.tier{border-top:4px solid var(--line);padding-top:16px;min-width:0}
-.tier.t0{border-top-color:var(--good)}
-.tier.t1{border-top-color:var(--good)}
-.tier.t2{border-top-color:var(--accent)}
-.tier.t3{border-top-color:var(--crit)}
-.tier .eyebrow{color:var(--ink)}
-.tier h3{font-size:20px;margin-top:8px}
-.tier p{color:var(--ink-2);font-size:15px;margin-top:8px}
-.tier ul{margin:12px 0 0;padding-left:18px;color:var(--ink-2);font-size:15px}
-.tier li{margin:4px 0}
-.note{margin-top:32px;padding:18px 20px;background:var(--accent-soft);border-radius:var(--radius);border:1px solid var(--line);font-size:15px;max-width:80ch}
-
-/* Products */
-.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px}
-@media (max-width:900px){.products{grid-template-columns:1fr}}
-.product{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;min-width:0;display:flex;flex-direction:column;gap:14px}
-.product .icon{width:44px;height:44px;border-radius:8px;background:var(--accent-soft);display:grid;place-items:center;color:var(--ink)}
-.product h3{font-size:22px}
-.product .sub{font-family:var(--mono);font-size:12px;color:var(--ink-2);letter-spacing:.06em;text-transform:uppercase}
-.product p{color:var(--ink-2);font-size:15px}
-.product ul{margin:0;padding-left:18px;color:var(--ink);font-size:15px}
-.product li{margin:5px 0}
-
-/* Pillars */
-.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;margin-top:40px}
-@media (max-width:900px){.pillars{grid-template-columns:1fr;gap:28px}}
-.pillar{min-width:0}
-.pillar h3{font-size:24px}
-.pillar p{color:var(--ink-2);margin-top:12px;font-size:16px}
-.pillar .lbl{font-family:var(--mono);font-size:12px;color:var(--ink-2);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:10px}
-
-/* Trust */
-.trust-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 36px;margin-top:40px}
-@media (max-width:760px){.trust-grid{grid-template-columns:1fr}}
-.trust-item{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;align-items:start}
-.trust-item .check{width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:500;margin-top:2px}
-.trust-item b{display:block;font-weight:600}
-.trust-item span{color:var(--ink-2);font-size:15px}
-.roadmap{margin-top:36px;font-family:var(--mono);font-size:13px;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
-.roadmap em{font-style:normal;padding:3px 8px;border:1px solid var(--line);border-radius:4px;color:var(--ink)}
-
-/* Resources */
-.resources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px}
-@media (max-width:900px){.resources{grid-template-columns:1fr}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;display:flex;flex-direction:column;gap:10px;min-width:0}
-.card:hover{border-color:var(--ink-2)}
-.card .eyebrow{color:var(--ink-2)}
-.card h3{font-size:18px}
-.card p{color:var(--ink-2);font-size:15px}
-.card .more{margin-top:auto;font-family:var(--mono);font-size:12px;color:var(--ink)}
-
-/* Demo */
-.demo{background:var(--console);color:var(--console-fg);border-top:1px solid var(--console-line)}
-.demo .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;padding-block:72px}
-@media (max-width:900px){.demo .wrap{grid-template-columns:1fr;gap:36px}}
-.demo h2{font-size:clamp(28px,3.6vw,40px);font-weight:800}
-.demo .lede{color:var(--console-muted)}
-.demo .eyebrow{color:var(--console-muted)}
-.demo .contact{margin-top:28px;font-family:var(--mono);font-size:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-.demo .contact code{background:var(--console-2);border:1px solid var(--console-line);padding:6px 10px;border-radius:4px;user-select:all}
-.demo .contact button{font-family:var(--mono);font-size:12px;padding:6px 10px;border-radius:4px;border:1px solid var(--console-line);background:transparent;color:var(--console-fg);cursor:pointer}
-.form{background:var(--console-2);border:1px solid var(--console-line);border-radius:10px;padding:24px;display:grid;gap:14px;min-width:0}
-.form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media (max-width:560px){.form .row{grid-template-columns:1fr}}
-.form label{display:grid;gap:6px;font-size:13px;color:var(--console-muted);min-width:0}
-.form input,.form select,.form textarea{width:100%;font:inherit;font-size:15px;color:var(--console-fg);background:var(--console);border:1px solid var(--console-line);border-radius:4px;padding:10px 12px;min-width:0}
-.form textarea{min-height:96px;resize:vertical}
-.form .btn{justify-self:start}
-.form .msg{font-family:var(--mono);font-size:13px;color:#FFD061;border:1px dashed var(--console-line);padding:10px 12px;border-radius:4px}
-
-/* Footer */
-footer{background:var(--surface);border-top:1px solid var(--line)}
-footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;padding-block:44px 36px}
-@media (max-width:820px){footer .wrap{grid-template-columns:1fr 1fr}}
-@media (max-width:480px){footer .wrap{grid-template-columns:1fr}}
-footer h4{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
-footer ul{list-style:none;margin:12px 0 0;padding:0}
-footer li{margin:7px 0}
-footer a{text-decoration:none;color:var(--ink-2);font-size:15px}
-footer a:hover{color:var(--ink)}
-footer .about p{color:var(--ink-2);font-size:15px;margin-top:12px;max-width:40ch}
-.legal{border-top:1px solid var(--line)}
-.legal .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;padding-block:16px;font-family:var(--mono);font-size:12px;color:var(--ink-2)}
-
-@media (prefers-reduced-motion: reduce){.live i{animation:none}}
-
-/* Theme switch: pill track, round knob; knob left = light, right = dark */
-.theme-toggle{--tt-w:52px;--tt-h:28px;--tt-pad:3px;--tt-border:2px;position:relative;flex:0 0 auto;width:var(--tt-w);height:var(--tt-h);padding:0;border:var(--tt-border) solid var(--ink);border-radius:999px;background:var(--bg);cursor:pointer;-webkit-appearance:none;appearance:none}
-.theme-toggle::after{content:"";position:absolute;top:var(--tt-pad);left:var(--tt-pad);width:calc(var(--tt-h) - 2*var(--tt-border) - 2*var(--tt-pad));height:calc(var(--tt-h) - 2*var(--tt-border) - 2*var(--tt-pad));border-radius:50%;background:var(--ink);transform:translateX(0)}
-.theme-toggle[aria-checked="true"]::after{transform:translateX(calc(var(--tt-w) - var(--tt-h)))}
-.theme-toggle:hover{border-color:var(--accent)}
-.theme-toggle:hover::after{background:var(--accent)}
-.theme-toggle .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.navlinks li.tt{display:flex;align-items:center}
-@media (prefers-reduced-motion: no-preference){.theme-toggle{transition:border-color 120ms ease}.theme-toggle::after{transition:transform 180ms cubic-bezier(.4,0,.2,1),background-color 120ms ease}}
-</style>
 </head>
-<body>
+<body data-base="">
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="announce"><div class="wrap"><span class="tag">New</span><span>Jessica, Automaata's AI assistant, is live on every page, 24/7.</span><a href="#" data-jessica>Say hello →</a></div></div>
 <header class="nav" id="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Automaata home">
-      <svg class="mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="18" cy="10" r="3.2" fill="#F2A900"/><path d="M8 20l5-10 2.6 5.2" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      automaata<small>.ai</small>
-    </a>
+    <a class="brand" href="index.html" aria-label="Automaata home"><svg class="mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="18" cy="10" r="3.2" fill="#F2A900"/><path d="M8 20l5-10 2.6 5.2" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>automaata<small>.ai</small></a>
     <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
     <ul class="navlinks" id="navlinks">
-      <li><a href="#platform">Platform</a></li>
-      <li><a href="#automation">Automation</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#trust">Trust</a></li>
-      <li><a href="#resources">Resources</a></li>
+      <li><button type="button" aria-expanded="false" aria-controls="mega-platform">Platform</button>
+        <div class="mega" id="mega-platform"><div class="wrap">
+          <div>
+            <div class="aud" role="tablist"><button type="button" role="tab" aria-selected="true" data-pane="firms">Security &amp; guarding providers</button><button type="button" role="tab" aria-selected="false" data-pane="inhouse">In-house security teams</button></div>
+            <div class="mpane" data-pane="firms"><div class="cols">
+              <div><h4>Field operations</h4><a href="platform/#tours">Checkpoint tours</a><a href="platform/#incidents">Incident reporting</a><a href="platform/#dar">Daily activity reports</a><a href="platform/#postorders">Post orders</a><a href="platform/#dispatch">Live map &amp; dispatch</a><a href="platform/#lone">Lone worker safety</a><a href="platform/#app">Officer App</a></div>
+              <div><h4>Run the business</h4><a href="platform/#scheduling">Scheduling</a><a href="platform/#time">Time &amp; attendance</a><a href="platform/#credentials">Credentials &amp; training</a><a href="platform/#billing">Billing &amp; contracts</a><a href="platform/#reconciliation">Reconciliation</a><a href="platform/#portal">Client portal</a><a href="platform/#console">Ops Console</a></div>
+              <div><h4>Data and AI</h4><a href="platform/#levels">Automation levels</a><a href="platform/#jessica">Jessica, AI assistant</a><a href="platform/#api">API &amp; integrations</a><a href="company/#trust">Trust &amp; security</a></div>
+            </div></div>
+            <div class="mpane" data-pane="inhouse" hidden><div class="cols">
+              <div><h4>Protect</h4><a href="solutions/#inhouse">Multi-site operations</a><a href="platform/#incidents">One incident taxonomy</a><a href="platform/#dispatch">Dispatch &amp; SOC view</a><a href="platform/#lone">Lone worker safety</a></div>
+              <div><h4>Oversee</h4><a href="solutions/#inhouse">Contractor oversight</a><a href="platform/#portal">Vendor reporting into your portal</a><a href="platform/#credentials">Compliance records</a><a href="platform/#reconciliation">Invoice verification</a></div>
+              <div><h4>Own the data</h4><a href="platform/#api">API &amp; exports</a><a href="platform/#levels">Automation levels</a><a href="company/#trust">Trust &amp; security</a></div>
+            </div></div>
+          </div>
+          <div class="side">
+            <a class="feat" href="resources/automated-scheduling-and-california-admt-rules/"><span class="eyebrow">Featured guide</span><b>Automated scheduling and California's ADMT rules</b><span>Notice, review and records when software proposes who works.</span></a>
+            <div class="badges"><span>Offline-first</span><span>AI text labeled</span><span>No training on client data</span><span>SOC 2 roadmap</span></div>
+            <a class="btn btn-primary btn-sm" href="pricing/#request">Get a demo</a>
+          </div>
+        </div></div>
+      </li>
+      <li><button type="button" aria-expanded="false" aria-controls="mega-solutions">Solutions</button>
+        <div class="mega" id="mega-solutions"><div class="wrap">
+          <div class="cols">
+            <div><h4>By business need</h4><a href="solutions/#operations">Streamline operations</a><a href="solutions/#safety">Safety &amp; incident response</a><a href="solutions/#margin">Protect margin &amp; billing</a><a href="solutions/#payroll">Automate payroll &amp; workforce</a><a href="solutions/#compliance">Stay compliant</a><a href="solutions/#roi">Prove ROI &amp; visibility</a></div>
+            <div><h4>By organization type</h4><a href="solutions/#firms">Security firms</a><a href="solutions/#inhouse">In-house security teams</a></div>
+            <div><h4>By industry</h4><a href="solutions/#industries">Event &amp; venue security</a><a href="solutions/#industries">Corporate campuses</a><a href="solutions/#industries">Hospitality</a><a href="solutions/#industries">Residential communities</a><a href="solutions/#industries">Logistics &amp; industrial</a><a href="solutions/#industries">Healthcare</a></div>
+          </div>
+          <div class="side">
+            <a class="feat" href="resources/duty-free-rest-breaks-in-california/"><span class="eyebrow">Featured guide</span><b>Duty-free rest breaks in California</b><span>What Augustus v. ABM requires of a guard schedule.</span></a>
+            <a class="btn btn-primary btn-sm" href="pricing/#request">Get a demo</a>
+          </div>
+        </div></div>
+      </li>
+      <li><button type="button" aria-expanded="false" aria-controls="mega-support">Support</button>
+        <div class="mega" id="mega-support"><div class="wrap">
+          <div class="cols two">
+            <div><h4>Get help</h4><a href="support/">Support overview</a><a href="#" data-jessica>Jessica, AI assistant<small>Available 24/7</small></a><a href="support/#email">Email a specialist</a><a href="support/#faq">Knowledge base</a></div>
+            <div><h4>Learn</h4><a href="support/#academy">Automaata Academy</a><a href="support/#status">System status</a><a href="resources/">Guides &amp; articles</a></div>
+          </div>
+          <div class="side">
+            <a class="feat" href="#" data-jessica><span class="eyebrow">24/7</span><b>Ask Jessica anything about Automaata</b><span>Instant answers, with an in-browser AI model you can switch on.</span></a>
+            <a class="btn btn-primary btn-sm" href="support/#email">Contact support</a>
+          </div>
+        </div></div>
+      </li>
+      <li><button type="button" aria-expanded="false" aria-controls="mega-resources">Resources</button>
+        <div class="mega" id="mega-resources"><div class="wrap">
+          <div class="cols two">
+            <div><h4>Library</h4><a href="resources/">All resources</a><a href="resources/#guides">Guides</a><a href="resources/#blog">Blog articles</a><a href="resources/#updates">Product updates</a></div>
+            <div><h4>More</h4><a href="resources/#cases">Case studies</a><a href="support/#academy">Automaata Academy</a></div>
+          </div>
+          <div class="side">
+            <a class="feat" href="resources/checkpoint-verification-nfc-qr-gps/"><span class="eyebrow">Featured guide</span><b>Checkpoint verification: NFC, QR or GPS?</b><span>Where each method is reliable and how to mix them on one tour.</span></a>
+            <a class="btn btn-primary btn-sm" href="pricing/#request">Get a demo</a>
+          </div>
+        </div></div>
+      </li>
+      <li><button type="button" aria-expanded="false" aria-controls="mega-company">Company</button>
+        <div class="mega" id="mega-company"><div class="wrap">
+          <div>
+            <p style="font-family:var(--display);font-weight:700;font-size:18px;margin-bottom:14px">Built in San Francisco for the people who protect people.</p>
+            <div class="badges" style="margin-bottom:18px"><span>Founded 2026</span><span>San Francisco</span><span>4 automation levels</span><span>AI, disclosed</span></div>
+            <div class="cols">
+              <div><h4>Company</h4><a href="company/">About Automaata</a><a href="company/#values">What we believe</a><a href="company/#leadership">Leadership</a></div>
+              <div><h4>Work with us</h4><a href="company/#careers">Careers</a><a href="support/#email">Contact</a></div>
+              <div><h4>Trust</h4><a href="company/#trust">Trust &amp; security</a><a href="legal/#ai">AI use disclosure</a></div>
+            </div>
+          </div>
+          <div class="side">
+            <a class="feat" href="resources/the-four-automation-levels-explained/"><span class="eyebrow">Featured article</span><b>The four automation levels, explained</b><span>How Automaata decides what to do on its own.</span></a>
+            <a class="btn btn-primary btn-sm" href="pricing/#request">Get a demo</a>
+          </div>
+        </div></div>
+      </li>
+      <li><a href="pricing/">Pricing</a></li>
       <li class="tt"><button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" title="Dark mode"><span class="sr">Dark mode</span></button></li>
-      <li><a class="btn btn-primary" href="#demo">Book a demo</a></li>
+      <li class="cta"><a class="btn btn-primary btn-sm" href="pricing/#request">Get a demo</a></li>
     </ul>
   </div>
 </header>
-
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <p class="eyebrow">AI-first security workforce management</p>
-        <h1>Run every post from one place. Let the paperwork run itself.</h1>
-        <p class="lede">Automaata gives contract guard companies and corporate security teams an officer app that works without signal, an operations console that drafts the schedule, the reports and the invoices, and an approval inbox where a person signs off on anything that touches pay or people.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#demo">Book a demo</a>
-          <a class="btn btn-ghost" href="#automation">See how the automation works</a>
-        </div>
-        <div class="rules">
-          <span>Guard-card expiry blocks</span>
-          <span>Duty-free rest breaks</span>
-          <span>Recorded location consent</span>
-        </div>
-      </div>
-      <div class="console" aria-label="Example of the operations console approval inbox">
-        <div class="console-head">
-          <strong>Ops console · Approval inbox</strong>
-          <span class="live"><i></i>Live · Tue 02:14 PDT</span>
-        </div>
-        <div class="console-row">
-          <time>02:11</time>
-          <div class="what"><b>Wednesday tour schedule published</b><span>Harbor Logistics Center · 3 routes · no manual edits</span></div>
-          <span class="chip auto">Auto · logged</span>
-        </div>
-        <div class="console-row">
-          <time>02:06</time>
-          <div class="what"><b>Incident report #4471 drafted from a voice note</b><span>Officer R. Ahmed · AI text labeled · original kept</span></div>
-          <span class="chip auto">Auto · logged</span>
-        </div>
-        <div class="console-row">
-          <time>01:58</time>
-          <div class="what"><b>Overtime proposed: 4.5 h, Friday night</b><span>Civic Center Garage · reason: call-off · cost shown before approval</span>
-            <div class="console-actions"><button class="ok" type="button">Approve</button><button type="button">Edit</button><button type="button">Decline</button></div>
-          </div>
-          <span class="chip approve">Needs approval</span>
-        </div>
-        <div class="console-row">
-          <time>01:40</time>
-          <div class="what"><b>Guard card expires in 21 days</b><span>J. Ortiz · reminder sent · schedule block set for day 22</span></div>
-          <span class="chip auto">Auto · logged</span>
-        </div>
-        <div class="console-row">
-          <time>01:12</time>
-          <div class="what"><b>October invoice draft ready</b><span>Northside Medical Campus · 1,284 approved hours · 2 rate changes applied</span></div>
-          <span class="chip approve">Needs approval</span>
-        </div>
-        <div class="console-foot">
-          <span>4 executed · 2 awaiting approval · 0 errors</span>
-          <span>Example data</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="builtfor band" aria-label="Who Automaata is built for">
-    <div class="wrap">
-      <p class="eyebrow">Built for</p>
-      <span>Event security</span>
-      <span>Contract guarding</span>
-      <span>Corporate security teams</span>
-      <span>Hospitality</span>
-      <span>Residential communities</span>
-      <span>Logistics and industrial sites</span>
-    </div>
-  </section>
-
-  <section class="section" id="platform">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Platform</p>
-        <h2>Everything your operation runs on, with the busywork already done</h2>
-        <p class="lede">Field tools for officers and supervisors. Office tools for schedulers, billing and HR. Each one tells you exactly what Automaata does on its own and where it waits for you.</p>
-      </div>
-      <div class="grid">
-        <article class="feature">
-          <span class="tag">Field</span>
-          <h3>Checkpoint tours</h3>
-          <p>NFC, QR and GPS checkpoints with late-tour alerts. Scans are stored on the phone and sync when the signal comes back, so a parking garage or a basement never loses a record.</p>
-          <p class="auto">logs scans · flags missed checkpoints · files exceptions</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Field</span>
-          <h3>Incident reporting</h3>
-          <p>Officers speak or type. The app drafts a structured report, marks every AI-written sentence, and keeps the original note beside it so the record stands up later.</p>
-          <p class="auto">drafts · labels AI text · routes to the supervisor</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Field</span>
-          <h3>Daily activity reports</h3>
-          <p>Every scan, task, photo and note on a shift rolls into a DAR the client receives when the shift ends. No rewriting at 6 a.m.</p>
-          <p class="auto">compiles · sends to the client portal and email</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Field</span>
-          <h3>Post orders</h3>
-          <p>Versioned instructions pushed to the right post, with read receipts. When an order changes, every officer on that post sees it before the next shift.</p>
-          <p class="auto">distributes · tracks acknowledgement</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Field</span>
-          <h3>Live map and dispatch</h3>
-          <p>See who is on post, dispatch the nearest available officer, and keep the runsheet for mobile patrols without a radio log.</p>
-          <p class="auto">suggests the nearest officer · logs response times</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Field</span>
-          <h3>Lone worker safety</h3>
-          <p>Check-in timers and missed-check-in escalation for officers working alone, with the supervisor's phone as the backstop.</p>
-          <p class="auto">escalates on a missed check-in</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Office</span>
-          <h3>Scheduling</h3>
-          <p>A constraint solver builds the roster around credentials, hours caps, duty-free breaks and site rules. A scheduler reviews it before anything posts to officers.</p>
-          <p class="auto">proposes the roster · explains every assignment · you approve</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Office</span>
-          <h3>Time and attendance</h3>
-          <p>Geofenced clock-in, break attestation at clock-out, and hours that are ready for payroll without a spreadsheet in between.</p>
-          <p class="auto">computes hours · flags anomalies</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Office</span>
-          <h3>Credentials and training</h3>
-          <p>Guard cards, permits and training hours with expiry alerts. An officer with a lapsed credential cannot be scheduled until it is renewed.</p>
-          <p class="auto">tracks · reminds · blocks scheduling on expiry</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Office</span>
-          <h3>Billing</h3>
-          <p>Invoices built from approved hours and bill rates with effective dates, so a mid-month rate change is applied to the right days.</p>
-          <p class="auto">drafts the invoice · you release it</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Office</span>
-          <h3>Client portal</h3>
-          <p>Clients see tours, reports and incidents for their own sites as they happen. It is the proof of service you sell with.</p>
-          <p class="auto">publishes · per-site access</p>
-        </article>
-        <article class="feature">
-          <span class="tag">Office</span>
-          <h3>Reconciliation</h3>
-          <p>Match your timesheets against a client's settlement report line by line and get a list of every gap before the invoice goes out.</p>
-          <p class="auto">matches · lists discrepancies with the evidence</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section band" id="automation">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Automation</p>
-        <h2>Automate everything. Decide the important things yourself.</h2>
-        <p class="lede">Every action Automaata takes carries one of four levels. The levels are fixed by what the action touches, not by how busy you are.</p>
-      </div>
-      <div class="tiers">
-        <div class="tier t0">
-          <p class="eyebrow">Level 0</p>
-          <h3>Drafts and files</h3>
-          <p>Work that produces a document for a person to use.</p>
-          <ul><li>Report drafts and summaries</li><li>Daily activity reports</li><li>Reminders and notices</li></ul>
-        </div>
-        <div class="tier t1">
-          <p class="eyebrow">Level 1</p>
-          <h3>Executes and logs</h3>
-          <p>Routine actions that are reversible and fully recorded.</p>
-          <ul><li>Publishing an unedited tour schedule</li><li>Sending routine client reports</li><li>Filing a checkpoint exception</li></ul>
-        </div>
-        <div class="tier t2">
-          <p class="eyebrow">Level 2</p>
-          <h3>Proposes, you approve</h3>
-          <p>Anything that changes who works, how much they earn or what a client pays.</p>
-          <ul><li>Shift assignments and overtime</li><li>Pay-run approval</li><li>Invoice release</li></ul>
-        </div>
-        <div class="tier t3">
-          <p class="eyebrow">Level 3</p>
-          <h3>Never automated</h3>
-          <p>Decisions that belong to a manager and a conversation.</p>
-          <ul><li>Discipline</li><li>Termination</li><li>Licensing determinations</li></ul>
-        </div>
-      </div>
-      <p class="note">Automated scheduling and pay decisions are regulated. Automaata is designed around notice before use, a human review path and a record of every decision, so your operation can meet California's automated decision-making rules and similar frameworks as they come into force.</p>
-    </div>
-  </section>
-
-  <section class="section" id="products">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Products</p>
-        <h2>Three surfaces, one record</h2>
-        <p class="lede">The officer app, the operations console and the client portal read and write the same data, so a scan in the field is on the client's screen before the officer reaches the next checkpoint.</p>
-      </div>
-      <div class="products">
-        <article class="product">
-          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10 18h4"/></svg></div>
-          <h3>Officer App</h3>
-          <p class="sub">iOS · Android</p>
-          <p>Built for a 12-hour shift on a low-cost phone. Large controls, low-light screens, and a battery budget that lasts the night.</p>
-          <ul>
-            <li>Works fully offline; syncs when a signal returns</li>
-            <li>NFC, QR and GPS checkpoints, manual check-in with a reason</li>
-            <li>Voice-to-report drafting, on the phone where the hardware supports it</li>
-            <li>Post orders, tasks and dispatch jobs in one place</li>
-          </ul>
-        </article>
-        <article class="product">
-          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <h3>Ops Console</h3>
-          <p class="sub">Windows · macOS · Browser</p>
-          <p>The desk where dispatch, scheduling, billing and the approval inbox live. Multi-window for a security operations center, single-window for a one-person office.</p>
-          <ul>
-            <li>Approval inbox with cost and reason on every proposal</li>
-            <li>Live map, dispatch and runsheets</li>
-            <li>Solver-built schedules with plain-language explanations</li>
-            <li>Pay-run and invoice preparation with effective-dated rates</li>
-          </ul>
-        </article>
-        <article class="product">
-          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 8h20M6 5.5h.01M9 5.5h.01"/></svg></div>
-          <h3>Client Portal</h3>
-          <p class="sub">Web</p>
-          <p>What your client logs into. Each contact sees only their own sites, with the tours, reports and incidents behind every invoice line.</p>
-          <ul>
-            <li>Live tour status and DAR history per site</li>
-            <li>Incident reports with photos and the officer's original note</li>
-            <li>Monthly service summaries written for a property manager, not an analyst</li>
-            <li>Invoice detail that ties every hour to a shift</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section band">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Why it matters</p>
-        <h2>What Automaata changes for a security operation</h2>
-      </div>
-      <div class="pillars">
-        <div class="pillar">
-          <span class="lbl">Operations</span>
-          <h3>Replace paper with proof</h3>
-          <p>A clipboard DAR proves nothing at a contract review. A timestamped, geolocated record of every tour and report does. Automaata produces that record as a by-product of the shift, with no extra work for the officer.</p>
-        </div>
-        <div class="pillar">
-          <span class="lbl">Officers</span>
-          <h3>Give every officer a partner on shift</h3>
-          <p>The app drafts the report, reminds about the tour, surfaces the post order and never asks for a signal it does not have. Officers spend the shift watching the site instead of the form.</p>
-        </div>
-        <div class="pillar">
-          <span class="lbl">Clients</span>
-          <h3>Show clients exactly what they pay for</h3>
-          <p>Bids are won and renewals are kept on evidence. The client portal and the monthly summary make your service visible to the person who signs the contract.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="trust">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Trust</p>
-        <h2>Security and AI commitments</h2>
-        <p class="lede">Incident reports become evidence and schedules decide people's pay. These are the rules the platform is built on.</p>
-      </div>
-      <div class="trust-grid">
-        <div class="trust-item"><span class="check">✓</span><div><b>AI-written text is labeled</b><span>Every sentence an AI drafted is marked, and the officer's original note is stored beside it.</span></div></div>
-        <div class="trust-item"><span class="check">✓</span><div><b>Client data is never used to train models</b><span>Your reports, sites and officers stay yours. Model vendors are bound by no-training terms.</span></div></div>
-        <div class="trust-item"><span class="check">✓</span><div><b>Every automated action has an audit record</b><span>Which agent, which model version, what it saw and what it did, replayable for a dispute or a records request.</span></div></div>
-        <div class="trust-item"><span class="check">✓</span><div><b>A person approves consequential decisions</b><span>Assignments, overtime, pay runs and invoices wait in the approval inbox. Nothing about a person's pay posts by itself.</span></div></div>
-        <div class="trust-item"><span class="check">✓</span><div><b>Location tracking only with recorded consent</b><span>Officers give written consent in the app before the first clock-in, and tracking stays within the shift.</span></div></div>
-        <div class="trust-item"><span class="check">✓</span><div><b>Encrypted and isolated by customer</b><span>Data is encrypted in transit and at rest, and each company's data is kept apart from every other company's.</span></div></div>
-      </div>
-      <p class="roadmap">Certification roadmap: <em>SOC 2 Type II</em> <em>ISO 27001</em> <em>CCPA and GDPR readiness</em></p>
-    </div>
-  </section>
-
-  <section class="section band" id="resources">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Resources</p>
-        <h2>Guides for people who run guard operations</h2>
-      </div>
-      <div class="resources">
-        <a class="card" href="#resources">
-          <span class="eyebrow">Guide</span>
-          <h3>Checkpoint verification: NFC, QR or GPS?</h3>
-          <p>Where each method is reliable, where it fails, and how to mix them on one tour.</p>
-          <span class="more">Read the guide →</span>
-        </a>
-        <a class="card" href="#resources">
-          <span class="eyebrow">Guide</span>
-          <h3>Duty-free rest breaks in California</h3>
-          <p>What Augustus v. ABM Security Services requires of your schedule, and how to document compliance.</p>
-          <span class="more">Read the guide →</span>
-        </a>
-        <a class="card" href="#resources">
-          <span class="eyebrow">Guide</span>
-          <h3>Automated scheduling and California's ADMT rules</h3>
-          <p>A plain-language brief on notice, review and record-keeping when software proposes who works.</p>
-          <span class="more">Read the guide →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="demo" id="demo">
-    <div class="wrap">
-      <div>
-        <p class="eyebrow">Book a demo</p>
-        <h2>See your own sites in Automaata</h2>
-        <p class="lede" style="margin-top:14px">Bring a schedule, a post order and a month of invoices. We will show you what the platform drafts, what it executes, and what it hands back to you for a decision.</p>
-        <div class="contact">
-          <span>Prefer email?</span>
-          <code id="email">hello@automaata.ai</code>
-          <button type="button" id="copyemail">Copy</button>
-          <span id="copied" hidden>Copied</span>
-        </div>
-      </div>
-      <form class="form" id="demoform" novalidate>
-        <div class="row">
-          <label for="f-name">Name<input id="f-name" name="name" type="text" autocomplete="name" required></label>
-          <label for="f-company">Company<input id="f-company" name="company" type="text" autocomplete="organization" required></label>
-        </div>
-        <div class="row">
-          <label for="f-email">Work email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
-          <label for="f-size">Officers on the roster
-            <select id="f-size" name="size">
-              <option>Under 25</option>
-              <option>25 to 100</option>
-              <option>100 to 500</option>
-              <option>Over 500</option>
-              <option>In-house corporate team</option>
-            </select>
-          </label>
-        </div>
-        <label for="f-msg">What do you want to automate first?<textarea id="f-msg" name="message"></textarea></label>
-        <button class="btn btn-primary" type="submit">Request a demo</button>
-        <p class="msg" id="formmsg" hidden></p>
-      </form>
-    </div>
-  </section>
-</main>
-
-<footer>
+<main id="main">
+<section class="hero">
   <div class="wrap">
+    <div>
+      <p class="eyebrow">AI-first security workforce management</p>
+      <h1>Run every post from one place. Let the paperwork run itself.</h1>
+      <p class="lede">Automaata gives contract guard companies and corporate security teams an officer app that works without signal, an operations console that drafts the schedule, the reports and the invoices, and an approval inbox where a person signs off on anything that touches pay or people.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="pricing/#request">Get a demo</a>
+        <a class="btn btn-ghost" href="platform/">Explore the platform</a>
+      </div>
+      <div class="rules"><span>Guard-card expiry blocks</span><span>Duty-free rest breaks</span><span>Recorded location consent</span></div>
+    </div>
+    <div class="console" aria-label="Example of the operations console approval inbox">
+      <div class="console-head"><strong>Ops console · Approval inbox</strong><span class="live"><i></i>Live · Tue 02:14 PDT</span></div>
+      <div class="console-row"><time>02:11</time><div class="what"><b>Wednesday tour schedule published</b><span>Harbor Logistics Center · 3 routes · no manual edits</span></div><span class="chip auto">Auto · logged</span></div>
+      <div class="console-row"><time>02:06</time><div class="what"><b>Incident report #4471 drafted from a voice note</b><span>Officer R. Ahmed · AI text labeled · original kept</span></div><span class="chip auto">Auto · logged</span></div>
+      <div class="console-row"><time>01:58</time><div class="what"><b>Overtime proposed: 4.5 h, Friday night</b><span>Civic Center Garage · reason: call-off · cost shown before approval</span><div class="console-actions"><button class="ok" type="button">Approve</button><button type="button">Edit</button><button type="button">Decline</button></div></div><span class="chip approve">Needs approval</span></div>
+      <div class="console-row"><time>01:40</time><div class="what"><b>Guard card expires in 21 days</b><span>J. Ortiz · reminder sent · schedule block set for day 22</span></div><span class="chip auto">Auto · logged</span></div>
+      <div class="console-row"><time>01:12</time><div class="what"><b>October invoice draft ready</b><span>Northside Medical Campus · 1,284 approved hours · 2 rate changes applied</span></div><span class="chip approve">Needs approval</span></div>
+      <div class="console-foot"><span>4 executed · 2 awaiting approval · 0 errors</span><span>Example data</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="builtfor band" aria-label="Who Automaata is built for">
+  <div class="wrap"><p class="eyebrow">Built for</p><span>Event security</span><span>Contract guarding</span><span>Corporate security teams</span><span>Hospitality</span><span>Residential communities</span><span>Logistics and industrial sites</span></div>
+</section>
+
+<section class="section" id="platform">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Platform</p>
+      <h2>Everything your operation runs on, with the busywork already done</h2>
+      <p class="lede">Field tools for officers and supervisors. Office tools for schedulers, billing and HR. Each one tells you exactly what Automaata does on its own and where it waits for you.</p>
+    </div>
+    <div class="grid c3">
+      <article class="card"><span class="tag">Field</span><h3>Checkpoint tours</h3><p>NFC, QR and GPS checkpoints with late-tour alerts. Scans are stored on the phone and sync when the signal comes back, so a parking garage or a basement never loses a record.</p><p class="auto">logs scans · flags missed checkpoints · files exceptions</p></article>
+      <article class="card"><span class="tag">Field</span><h3>Incident reporting</h3><p>Officers speak or type. The app drafts a structured report, marks every AI-written sentence, and keeps the original note beside it so the record stands up later.</p><p class="auto">drafts · labels AI text · routes to the supervisor</p></article>
+      <article class="card"><span class="tag">Field</span><h3>Daily activity reports</h3><p>Every scan, task, photo and note on a shift rolls into a DAR the client receives when the shift ends. No rewriting at 6 a.m.</p><p class="auto">compiles · sends to the client portal and email</p></article>
+      <article class="card"><span class="tag">Field</span><h3>Post orders</h3><p>Versioned instructions pushed to the right post, with read receipts. When an order changes, every officer on that post sees it before the next shift.</p><p class="auto">distributes · tracks acknowledgement</p></article>
+      <article class="card"><span class="tag">Field</span><h3>Live map and dispatch</h3><p>See who is on post, dispatch the nearest available officer, and keep the runsheet for mobile patrols without a radio log.</p><p class="auto">suggests the nearest officer · logs response times</p></article>
+      <article class="card"><span class="tag">Field</span><h3>Lone worker safety</h3><p>Check-in timers and missed-check-in escalation for officers working alone, with the supervisor's phone as the backstop.</p><p class="auto">escalates on a missed check-in</p></article>
+      <article class="card"><span class="tag">Office</span><h3>Scheduling</h3><p>A constraint solver builds the roster around credentials, hours caps, duty-free breaks and site rules. A scheduler reviews it before anything posts to officers.</p><p class="auto">proposes the roster · explains every assignment · you approve</p></article>
+      <article class="card"><span class="tag">Office</span><h3>Time and attendance</h3><p>Geofenced clock-in, break attestation at clock-out, and hours that are ready for payroll without a spreadsheet in between.</p><p class="auto">computes hours · flags anomalies</p></article>
+      <article class="card"><span class="tag">Office</span><h3>Credentials and training</h3><p>Guard cards, permits and training hours with expiry alerts. An officer with a lapsed credential cannot be scheduled until it is renewed.</p><p class="auto">tracks · reminds · blocks scheduling on expiry</p></article>
+      <article class="card"><span class="tag">Office</span><h3>Billing</h3><p>Invoices built from approved hours and bill rates with effective dates, so a mid-month rate change is applied to the right days.</p><p class="auto">drafts the invoice · you release it</p></article>
+      <article class="card"><span class="tag">Office</span><h3>Client portal</h3><p>Clients see tours, reports and incidents for their own sites as they happen. It is the proof of service you sell with.</p><p class="auto">publishes · per-site access</p></article>
+      <article class="card"><span class="tag">Office</span><h3>Reconciliation</h3><p>Match your timesheets against a client's settlement report line by line and get a list of every gap before the invoice goes out.</p><p class="auto">matches · lists discrepancies with the evidence</p></article>
+    </div>
+    <p style="margin-top:28px"><a class="arrow" href="platform/">See the full platform →</a></p>
+  </div>
+</section>
+
+<section class="section band" id="automation">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Automation</p>
+      <h2>Automate everything. Decide the important things yourself.</h2>
+      <p class="lede">Every action Automaata takes carries one of four levels. The levels are fixed by what the action touches, not by how busy you are.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier t0"><p class="eyebrow">Level 0</p><h3>Drafts and files</h3><p>Work that produces a document for a person to use.</p><ul><li>Report drafts and summaries</li><li>Daily activity reports</li><li>Reminders and notices</li></ul></div>
+      <div class="tier t1"><p class="eyebrow">Level 1</p><h3>Executes and logs</h3><p>Routine actions that are reversible and fully recorded.</p><ul><li>Publishing an unedited tour schedule</li><li>Sending routine client reports</li><li>Filing a checkpoint exception</li></ul></div>
+      <div class="tier t2"><p class="eyebrow">Level 2</p><h3>Proposes, you approve</h3><p>Anything that changes who works, how much they earn or what a client pays.</p><ul><li>Shift assignments and overtime</li><li>Pay-run approval</li><li>Invoice release</li></ul></div>
+      <div class="tier t3"><p class="eyebrow">Level 3</p><h3>Never automated</h3><p>Decisions that belong to a manager and a conversation.</p><ul><li>Discipline</li><li>Termination</li><li>Licensing determinations</li></ul></div>
+    </div>
+    <p class="note">Automated scheduling and pay decisions are regulated. Automaata is designed around notice before use, a human review path and a record of every decision, so your operation can meet California's automated decision-making rules and similar frameworks as they come into force.</p>
+  </div>
+</section>
+
+<section class="section" id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Products</p>
+      <h2>Three surfaces, one record</h2>
+      <p class="lede">The officer app, the operations console and the client portal read and write the same data, so a scan in the field is on the client's screen before the officer reaches the next checkpoint.</p>
+    </div>
+    <div class="grid c3">
+      <article class="card"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10 18h4"/></svg></div><h3>Officer App</h3><span class="tag">iOS · Android</span><p>Built for a 12-hour shift on a low-cost phone. Large controls, low-light screens, and a battery budget that lasts the night.</p><ul><li>Works fully offline; syncs when a signal returns</li><li>NFC, QR and GPS checkpoints, manual check-in with a reason</li><li>Voice-to-report drafting, on the phone where the hardware supports it</li><li>Post orders, tasks and dispatch jobs in one place</li></ul></article>
+      <article class="card"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Ops Console</h3><span class="tag">Windows · macOS · Browser</span><p>The desk where dispatch, scheduling, billing and the approval inbox live. Multi-window for a security operations center, single-window for a one-person office.</p><ul><li>Approval inbox with cost and reason on every proposal</li><li>Live map, dispatch and runsheets</li><li>Solver-built schedules with plain-language explanations</li><li>Pay-run and invoice preparation with effective-dated rates</li></ul></article>
+      <article class="card"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 8h20M6 5.5h.01M9 5.5h.01"/></svg></div><h3>Client Portal</h3><span class="tag">Web</span><p>What your client logs into. Each contact sees only their own sites, with the tours, reports and incidents behind every invoice line.</p><ul><li>Live tour status and DAR history per site</li><li>Incident reports with photos and the officer's original note</li><li>Monthly service summaries written for a property manager, not an analyst</li><li>Invoice detail that ties every hour to a shift</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="section band">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Why it matters</p><h2>What Automaata changes for a security operation</h2></div>
+    <div class="pillars">
+      <div class="pillar"><span class="lbl">Operations</span><h3>Replace paper with proof</h3><p>A clipboard DAR proves nothing at a contract review. A timestamped, geolocated record of every tour and report does. Automaata produces that record as a by-product of the shift, with no extra work for the officer.</p></div>
+      <div class="pillar"><span class="lbl">Officers</span><h3>Give every officer a partner on shift</h3><p>The app drafts the report, reminds about the tour, surfaces the post order and never asks for a signal it does not have. Officers spend the shift watching the site instead of the form.</p></div>
+      <div class="pillar"><span class="lbl">Clients</span><h3>Show clients exactly what they pay for</h3><p>Bids are won and renewals are kept on evidence. The client portal and the monthly summary make your service visible to the person who signs the contract.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="trust">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Trust</p><h2>Security and AI commitments</h2><p class="lede">Incident reports become evidence and schedules decide people's pay. These are the rules the platform is built on.</p></div>
+    <div class="trust-grid">
+      <div class="trust-item"><span class="check">✓</span><div><b>AI-written text is labeled</b><span>Every sentence an AI drafted is marked, and the officer's original note is stored beside it.</span></div></div>
+      <div class="trust-item"><span class="check">✓</span><div><b>Client data is never used to train models</b><span>Your reports, sites and officers stay yours. Model vendors are bound by no-training terms.</span></div></div>
+      <div class="trust-item"><span class="check">✓</span><div><b>Every automated action has an audit record</b><span>Which agent, which model version, what it saw and what it did, replayable for a dispute or a records request.</span></div></div>
+      <div class="trust-item"><span class="check">✓</span><div><b>A person approves consequential decisions</b><span>Assignments, overtime, pay runs and invoices wait in the approval inbox. Nothing about a person's pay posts by itself.</span></div></div>
+      <div class="trust-item"><span class="check">✓</span><div><b>Location tracking only with recorded consent</b><span>Officers give written consent in the app before the first clock-in, and tracking stays within the shift.</span></div></div>
+      <div class="trust-item"><span class="check">✓</span><div><b>Encrypted and isolated by customer</b><span>Data is encrypted in transit and at rest, and each company's data is kept apart from every other company's.</span></div></div>
+    </div>
+    <p class="roadmap">Certification roadmap: <em>SOC 2 Type II</em> <em>ISO 27001</em> <em>CCPA and GDPR readiness</em> <a class="arrow" href="company/#trust">Trust &amp; security →</a></p>
+  </div>
+</section>
+
+<section class="section band" id="resources">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Resources</p><h2>Guides for people who run guard operations</h2></div>
+    <div class="grid c3">
+      <a class="card" href="resources/checkpoint-verification-nfc-qr-gps/"><span class="eyebrow">Guide</span><h3>Checkpoint verification: NFC, QR or GPS?</h3><p>Where each method is reliable, where it fails, and how to mix them on one tour.</p><span class="arrow more">Read the guide →</span></a>
+      <a class="card" href="resources/duty-free-rest-breaks-in-california/"><span class="eyebrow">Guide</span><h3>Duty-free rest breaks in California</h3><p>What Augustus v. ABM Security Services requires of your schedule, and how to document compliance.</p><span class="arrow more">Read the guide →</span></a>
+      <a class="card" href="resources/automated-scheduling-and-california-admt-rules/"><span class="eyebrow">Guide</span><h3>Automated scheduling and California's ADMT rules</h3><p>A plain-language brief on notice, review and record-keeping when software proposes who works.</p><span class="arrow more">Read the guide →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="demo" id="demo">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Book a demo</p>
+      <h2>See your own sites in Automaata</h2>
+      <p class="lede" style="margin-top:14px">Bring a schedule, a post order and a month of invoices. We will show you what the platform drafts, what it executes, and what it hands back to you for a decision.</p>
+      <div class="contact"><span>Prefer email?</span><code id="email">hello@automaata.ai</code><button type="button" data-copy="email">Copy</button></div>
+      <p class="lede" style="margin-top:22px;font-size:15px">Or <a href="#" data-jessica style="color:var(--accent)">ask Jessica</a>, our AI assistant, anything about the platform right now.</p>
+    </div>
+    <form class="form" id="demoform" data-static data-subject="Demo request" novalidate>
+      <div class="row">
+        <label for="f-name">Name<input id="f-name" name="name" data-label="Name" type="text" autocomplete="name" required></label>
+        <label for="f-company">Company<input id="f-company" name="company" data-label="Company" type="text" autocomplete="organization" required></label>
+      </div>
+      <div class="row">
+        <label for="f-email">Work email<input id="f-email" name="email" data-label="Email" type="email" autocomplete="email" required></label>
+        <label for="f-size">Officers on the roster<select id="f-size" name="size" data-label="Officers"><option>Under 25</option><option>25 to 100</option><option>100 to 500</option><option>Over 500</option><option>In-house corporate team</option></select></label>
+      </div>
+      <label for="f-msg">What do you want to automate first?<textarea id="f-msg" name="message" data-label="Message"></textarea></label>
+      <button class="btn btn-primary" type="submit">Request a demo</button>
+      <p class="msg" hidden></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap top">
     <div class="about">
-      <a class="brand" href="#top">
-        <svg class="mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="18" cy="10" r="3.2" fill="#F2A900"/><path d="M8 20l5-10 2.6 5.2" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        automaata<small>.ai</small>
-      </a>
+      <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="18" cy="10" r="3.2" fill="#F2A900"/><path d="M8 20l5-10 2.6 5.2" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>automaata<small>.ai</small></a>
       <p>AI-first security workforce management for contract guard companies and in-house security teams. Field operations, back office and client reporting on one record.</p>
+      <div class="mini"><span>Founded 2026 · San Francisco</span><span>AI text labeled</span><span>No training on client data</span></div>
     </div>
-    <div>
-      <h4>Platform</h4>
-      <ul>
-        <li><a href="#platform">Field operations</a></li>
-        <li><a href="#platform">Back office</a></li>
-        <li><a href="#automation">Automation levels</a></li>
-        <li><a href="#products">Officer App</a></li>
-        <li><a href="#products">Ops Console</a></li>
-        <li><a href="#products">Client Portal</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#trust">Trust</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#demo">Book a demo</a></li>
-        <li><a href="#demo">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="#top">Privacy policy</a></li>
-        <li><a href="#top">Terms of service</a></li>
-        <li><a href="#top">AI use disclosure</a></li>
-        <li><a href="#top">Data processing addendum</a></li>
-      </ul>
-    </div>
+    <div><h4>Platform</h4><ul><li><a href="platform/">Platform overview</a></li><li><a href="platform/#app">Officer App</a></li><li><a href="platform/#console">Ops Console</a></li><li><a href="platform/#portal">Client Portal</a></li><li><a href="platform/#tours">Checkpoint tours</a></li><li><a href="platform/#incidents">Incident reporting</a></li><li><a href="platform/#scheduling">Scheduling</a></li><li><a href="platform/#time">Time &amp; attendance</a></li><li><a href="platform/#billing">Billing</a></li><li><a href="platform/#levels">Automation levels</a></li><li><a href="platform/#jessica">Jessica AI</a></li><li><a href="platform/#api">API &amp; integrations</a></li></ul></div>
+    <div><h4>Solutions</h4><ul><li><a href="solutions/#operations">Streamline operations</a></li><li><a href="solutions/#safety">Safety &amp; incidents</a></li><li><a href="solutions/#margin">Margin &amp; billing</a></li><li><a href="solutions/#payroll">Payroll &amp; workforce</a></li><li><a href="solutions/#compliance">Compliance</a></li><li><a href="solutions/#roi">ROI &amp; visibility</a></li><li><a href="solutions/#firms">Security firms</a></li><li><a href="solutions/#inhouse">In-house teams</a></li><li><a href="solutions/#industries">Industries</a></li></ul></div>
+    <div><h4>Resources</h4><ul><li><a href="resources/">All resources</a></li><li><a href="resources/#guides">Guides</a></li><li><a href="resources/#blog">Blog</a></li><li><a href="resources/#updates">Product updates</a></li><li><a href="resources/#cases">Case studies</a></li><li><a href="support/#academy">Academy</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="company/">About</a></li><li><a href="company/#values">Values</a></li><li><a href="company/#leadership">Leadership</a></li><li><a href="company/#careers">Careers</a></li><li><a href="company/#trust">Trust &amp; security</a></li><li><a href="support/#email">Contact</a></li></ul></div>
+    <div><h4>Support</h4><ul><li><a href="support/">Support overview</a></li><li><a href="#" data-jessica>Ask Jessica (24/7)</a></li><li><a href="support/#email">Email support</a></li><li><a href="support/#faq">Knowledge base</a></li><li><a href="support/#status">System status</a></li><li><a href="pricing/">Pricing</a></li></ul></div>
   </div>
-  <div class="legal">
-    <div class="wrap">
-      <span>© <span id="year">2026</span> Automaata · automaata.ai · San Francisco, California</span>
-      <span>Automaata is an independent company and is not affiliated with any other security software provider.</span>
-    </div>
-  </div>
+  <div class="legal"><div class="wrap">
+    <span>© <span data-year>2026</span> Automaata · automaata.ai · San Francisco, California · Independent, not affiliated with any other security software provider.</span>
+    <span class="links"><a href="legal/#privacy">Privacy</a><a href="legal/#terms">Terms</a><a href="legal/#ai">AI use</a><a href="legal/#accessibility">Accessibility</a><a href="sitemap.xml">Sitemap</a></span>
+  </div></div>
 </footer>
-
-<script>
-(function(){
-  var y=document.getElementById('year'); if(y){y.textContent=String(new Date().getFullYear());}
-
-  var nav=document.querySelector('.nav'), tg=document.getElementById('navtoggle');
-  if(tg&&nav){
-    tg.addEventListener('click',function(){
-      var open=nav.classList.toggle('open');
-      tg.setAttribute('aria-expanded',open?'true':'false');
-      tg.textContent=open?'CLOSE':'MENU';
-    });
-    nav.querySelectorAll('.navlinks a').forEach(function(a){
-      a.addEventListener('click',function(){nav.classList.remove('open');tg.setAttribute('aria-expanded','false');tg.textContent='MENU';});
-    });
-  }
-
-  var form=document.getElementById('demoform'), msg=document.getElementById('formmsg');
-  if(form&&msg){
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      var name=document.getElementById('f-name'), company=document.getElementById('f-company'), email=document.getElementById('f-email');
-      var missing=[];
-      if(!name.value.trim()) missing.push('name');
-      if(!company.value.trim()) missing.push('company');
-      if(!email.value.trim()||email.value.indexOf('@')<0) missing.push('a valid work email');
-      if(missing.length){
-        msg.textContent='Please add your '+missing.join(', ')+' before sending.';
-        msg.hidden=false; return;
-      }
-      msg.textContent='This preview does not send requests yet. Connect the form to your CRM or inbox before launch, or email hello@automaata.ai.';
-      msg.hidden=false;
-    });
-  }
-
-  var cp=document.getElementById('copyemail'), em=document.getElementById('email'), ok=document.getElementById('copied');
-  if(cp&&em&&ok){
-    cp.addEventListener('click',function(){
-      var text=em.textContent;
-      function done(){ok.hidden=false;setTimeout(function(){ok.hidden=true;},1800);}
-      function fallback(){var r=document.createRange();r.selectNodeContents(em);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}
-      if(navigator.clipboard&&navigator.clipboard.writeText){
-        navigator.clipboard.writeText(text).then(done,fallback);
-      } else { fallback(); }
-    });
-  }
-})();
-</script>
-<script>
-  (function () {
-    var root = document.documentElement;
-    var toggle = document.getElementById('theme-toggle');
-    var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
-    function isDark() {
-      var t = root.getAttribute('data-theme');
-      if (t === 'dark') return true;
-      if (t === 'light') return false;
-      return !!(mq && mq.matches);
-    }
-    function render() { if (toggle) toggle.setAttribute('aria-checked', isDark() ? 'true' : 'false'); }
-    if (toggle) {
-      toggle.addEventListener('click', function () {
-        var next = isDark() ? 'light' : 'dark';
-        root.setAttribute('data-theme', next);
-        try { localStorage.setItem('theme', next); } catch (e) {}
-        render();
-      });
-      if (mq && mq.addEventListener) mq.addEventListener('change', render);
-      render();
-    }
-  })();
-</script>
+<script src="assets/site.js"></script>
+<script src="assets/jessica.js"></script>
 </body>
 </html>

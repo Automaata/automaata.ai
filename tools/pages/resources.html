@@ -1,0 +1,52 @@
+<!-- title: Resources | desc: Guides, articles and product updates for people who run guard operations: checkpoint verification, California rest-break and guard-card rules, automated-scheduling regulation, offline field apps and the four automation levels. | nav: resources -->
+<section class="hero single">
+  <div class="wrap">
+    <p class="crumbs"><a href="../index.html">Home</a><span>Resources</span></p>
+    <p class="eyebrow">Resources</p>
+    <h1>Everything you need to run smarter security operations.</h1>
+    <p class="lede">Practical guides, plain-language briefs on the rules that govern guard work, and notes on how the platform is built. Written for the people who schedule, supervise and bill, not for analysts.</p>
+    <p class="lede" style="margin-top:16px;font-size:15px"><b style="color:var(--ink)">New:</b> ask Jessica to summarize any guide for your situation. <a href="#" data-jessica style="color:var(--warn)">Ask Jessica →</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" aria-selected="true" data-res-type="all">All resources</button>
+      <button type="button" role="tab" aria-selected="false" data-res-type="guide" id="guides">Guides</button>
+      <button type="button" role="tab" aria-selected="false" data-res-type="blog" id="blog">Blog articles</button>
+      <button type="button" role="tab" aria-selected="false" data-res-type="update" id="updates">Product updates</button>
+      <button type="button" role="tab" aria-selected="false" data-res-type="case" id="cases">Case studies</button>
+    </div>
+    <div class="res-layout">
+      <aside class="filters" aria-label="Filters">
+        <div><h4>Organization type</h4>
+          <label><input type="checkbox" data-res-aud="firms"> Security firms</label>
+          <label><input type="checkbox" data-res-aud="inhouse"> In-house security teams</label>
+        </div>
+        <div><h4>Topic</h4>
+          <label><input type="checkbox" data-res-topic="tours"> Checkpoint tours</label>
+          <label><input type="checkbox" data-res-topic="incidents"> Incident reporting</label>
+          <label><input type="checkbox" data-res-topic="scheduling"> Scheduling</label>
+          <label><input type="checkbox" data-res-topic="compliance"> Compliance</label>
+          <label><input type="checkbox" data-res-topic="mobile"> Officer App</label>
+          <label><input type="checkbox" data-res-topic="ai"> AI &amp; automation</label>
+          <label><input type="checkbox" data-res-topic="billing"> Billing &amp; payroll</label>
+        </div>
+        <button type="button" class="reset" data-res-reset>Reset filters</button>
+      </aside>
+      <div>
+        <p class="res-count" data-res-count>1–{{RESOURCE_COUNT}} of {{RESOURCE_COUNT}} results</p>
+        <div class="res-list" data-resources>
+{{RESOURCE_ITEMS}}
+        </div>
+        <div class="empty" data-res-empty>No resources match those filters yet. Case studies will appear here as the first customers go live. Clear a filter, or <a href="../pricing/#request">book a demo</a> if you would like to be one of them.</div>
+        <div class="pager" aria-label="Pagination"><span class="on">1</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap"><div><h2>Want a guide on something we have not covered?</h2><p>Tell us what you are trying to solve and we will write it, or walk you through it on a demo.</p></div><div class="btns"><a class="btn btn-primary" href="../pricing/#request">Get a demo</a><a class="btn btn-ghost" href="../support/#email">Suggest a topic</a></div></div>
+</section>
